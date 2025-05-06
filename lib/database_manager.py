@@ -6,6 +6,7 @@ from lib.utils import parallel_for
 
 from datetime import datetime
 from collections import OrderedDict
+import json
 
 
 class DatabaseManager:
@@ -22,11 +23,11 @@ class DatabaseManager:
         if not DatabaseManager._initialized:
             self.supabase = create_client(env.SUPABASE_URL, env.SUPABASE_KEY)
 
-            try:
-                _ = self.supabase.rpc('manifest').execute()
-                log.info("Database connection successful")
-            except Exception as e:
-                log.warning(f"Database health check failed (this is normal on first run): {str(e)}")
+            # try:
+            #     _ = self.supabase.rpc('manifest').execute()
+            #     log.info("Database connection successful")
+            # except Exception as e:
+            #     log.warning(f"Database health check failed (this is normal on first run): {str(e)}")
 
             # Load all data into memory at startup
             self.__cached_data = {
@@ -86,59 +87,61 @@ class DatabaseManager:
         return self.__cached_data["metas"]
 
     def get_tmdb_ids(self) -> dict:
-        try:
-            all_tmdb_ids = {}
-            page_size = 1000
+        return {}
+        # try:
+        #     all_tmdb_ids = {}
+        #     page_size = 1000
 
-            try:
-                total_items = self.supabase.table("tmdb_ids").select("key", count='exact').execute().count
-            except Exception as e:
-                log.warning(f"Failed to get exact count for tmdb_ids, using pagination fallback: {e}")
-                total_items = page_size
+        #     try:
+        #         total_items = self.supabase.table("tmdb_ids").select("key", count='exact').execute().count
+        #     except Exception as e:
+        #         log.warning(f"Failed to get exact count for tmdb_ids, using pagination fallback: {e}")
+        #         total_items = page_size
 
-            ranges = [(i, min(i + page_size - 1, total_items - 1)) 
-                     for i in range(0, total_items, page_size)]
+        #     ranges = [(i, min(i + page_size - 1, total_items - 1)) 
+        #              for i in range(0, total_items, page_size)]
 
-            def fetch_range(range_tuple, idx, worker_id):
-                start, end = range_tuple
-                max_retries = 3
-                for attempt in range(max_retries):
-                    try:
-                        response = self.supabase.table("tmdb_ids") \
-                            .select("key, value") \
-                            .range(start, end) \
-                            .execute()
-                        result = {item['key']: item['value'] for item in response.data}
-                        # If we got no results and we're using the fallback, we've reached the end
-                        if not result and total_items == page_size:
-                            return None
-                        return result
-                    except Exception as e:
-                        if attempt == max_retries - 1:
-                            raise
-                        log.warning(f"Retry {attempt + 1}/{max_retries} failed: {e}")
-                        import time
-                        time.sleep(1)
+        #     def fetch_range(range_tuple, idx, worker_id):
+        #         start, end = range_tuple
+        #         max_retries = 3
+        #         for attempt in range(max_retries):
+        #             try:
+        #                 response = self.supabase.table("tmdb_ids") \
+        #                     .select("key, value") \
+        #                     .range(start, end) \
+        #                     .execute()
+        #                 result = {item['key']: item['value'] for item in response.data}
+        #                 # If we got no results and we're using the fallback, we've reached the end
+        #                 if not result and total_items == page_size:
+        #                     return None
+        #                 return result
+        #             except Exception as e:
+        #                 if attempt == max_retries - 1:
+        #                     raise
+        #                 log.warning(f"Retry {attempt + 1}/{max_retries} failed: {e}")
+        #                 import time
+        #                 time.sleep(1)
 
-            results = parallel_for(fetch_range, ranges, max_workers=4)
-            for result in results:
-                if isinstance(result, dict):
-                    all_tmdb_ids.update(result)
+        #     results = parallel_for(fetch_range, ranges, max_workers=4)
+        #     for result in results:
+        #         if isinstance(result, dict):
+        #             all_tmdb_ids.update(result)
 
-            return all_tmdb_ids
-        except Exception as e:
-            log.error(f"Failed to read from tmdb_ids: {e}")
-            return {}
+        #     return all_tmdb_ids
+        # except Exception as e:
+        #     log.error(f"Failed to read from tmdb_ids: {e}")
+        #     return {}
 
     def get_manifest(self) -> dict:
-        try:
-            response = self.supabase.table("manifest").select("key, value").execute()
-            if not response.data:
-                return {}
-            return {item['key']: item['value'] for item in response.data}
-        except Exception as e:
-            log.error(f"Failed to read from manifest: {e}")
-            return {}
+        return json.load(open('manifest.json'))
+        # try:
+            # response = self.supabase.table("manifest").select("key, value").execute()
+            # if not response.data:
+            #     return {}
+            # return {item['key']: item['value'] for item in response.data}
+        # except Exception as e:
+        #     log.error(f"Failed to read from manifest: {e}")
+        #     return {}
 
     def get_metas(self) -> dict:
         try:
@@ -192,42 +195,43 @@ class DatabaseManager:
             return {}
 
     def get_catalogs(self) -> OrderedDict:
-        try:
-            all_catalogs = OrderedDict()
-            page_size = 100
-            start = 0
+        return json.load(open('catalogs.json'))
+        # try:
+        #     all_catalogs = OrderedDict()
+        #     page_size = 100
+        #     start = 0
 
-            while True:
-                response = self.supabase.table("catalogs") \
-                    .select("key, value") \
-                    .range(start, start + page_size - 1) \
-                    .execute()
+        #     while True:
+        #         response = self.supabase.table("catalogs") \
+        #             .select("key, value") \
+        #             .range(start, start + page_size - 1) \
+        #             .execute()
 
-                if not response.data:
-                    break
+        #         if not response.data:
+        #             break
 
-                catalogs_page = {item['key']: item['value'] for item in response.data}
+        #         catalogs_page = {item['key']: item['value'] for item in response.data}
 
-                for key, value in catalogs_page.items():
-                    if not isinstance(value, dict):
-                        continue
-                    data = value.get("data") or []
-                    conv_data = []
-                    for item in data:
-                        if isinstance(item, dict):
-                            conv_data.append(ImdbInfo.from_dict(item))
-                    value.update({"data": conv_data})
-                    all_catalogs[key] = value
+        #         for key, value in catalogs_page.items():
+        #             if not isinstance(value, dict):
+        #                 continue
+        #             data = value.get("data") or []
+        #             conv_data = []
+        #             for item in data:
+        #                 if isinstance(item, dict):
+        #                     conv_data.append(ImdbInfo.from_dict(item))
+        #             value.update({"data": conv_data})
+        #             all_catalogs[key] = value
 
-                if len(response.data) < page_size:
-                    break
+        #         if len(response.data) < page_size:
+        #             break
 
-                start += page_size
+        #         start += page_size
 
-            return all_catalogs
-        except Exception as e:
-            log.error(f"Failed to read from catalogs: {e}")
-            return {}
+        #     return all_catalogs
+        # except Exception as e:
+        #     log.error(f"Failed to read from catalogs: {e}")
+        #     return {}
 
     def update_tmdb_ids(self, tmdb_ids: dict):
         try:
@@ -311,9 +315,6 @@ class DatabaseManager:
 
     def update_catalogs(self, catalogs: dict):
         try:
-            import json
-            from datetime import datetime
-
             class DateTimeEncoder(json.JSONEncoder):
                 def default(self, obj):
                     if isinstance(obj, datetime):

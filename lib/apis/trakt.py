@@ -3,10 +3,11 @@ import json
 import httpx
 
 from lib import env, log
+from typing import Optional
 
 
 class Trakt:
-    def __init__(self, client_id: str | None = None) -> None:
+    def __init__(self, client_id: Optional[str] = None) -> None:
         self.__url = "https://api.trakt.tv/"
         self.client_id = client_id or env.TRAKT_CLIENT_ID
         self.client_secret = env.TRAKT_CLIENT_SECRET
@@ -19,7 +20,7 @@ class Trakt:
     def get_authorization_url(self) -> str:
         return f"https://trakt.tv/oauth/authorize?response_type=code&client_id={self.client_id}&redirect_uri={self.redirect_uri}"
 
-    def get_access_token(self, authorization_code: str) -> str | None:
+    def get_access_token(self, authorization_code: str) -> Optional[str]:
         token_url = "https://trakt.tv/oauth/token"
         payload = {
             "code": authorization_code,
@@ -41,7 +42,7 @@ class Trakt:
                 log.info(e)
         return None
 
-    def __request(self, url: str, access_token: str, timeout: int) -> dict | None:
+    def __request(self, url: str, access_token: str, timeout: int) -> Optional[dict]:
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {access_token}",

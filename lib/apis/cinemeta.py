@@ -3,6 +3,7 @@ import json
 import httpx
 
 from lib import log
+from typing import Optional
 
 
 class Cinemeta:
@@ -73,7 +74,7 @@ class Cinemeta:
                 log.info(e)
         return results
 
-    def get_meta(self, id: str, s_type: str) -> dict | None:
+    def get_meta(self, id: str, s_type: str) -> Optional[dict]:
         meta_url = f"{self.__url}meta/{s_type}/{id}.json"
         with httpx.Client(follow_redirects=True) as client:
             try:
@@ -95,7 +96,7 @@ class Cinemeta:
         return year
 
     @staticmethod
-    def get_simplified_genre(name: str) -> str | None:
+    def get_simplified_genre(name: str) -> Optional[str]:
         simplified_genre = {
             "Kids": "Kids",
             "Musical": "Music",

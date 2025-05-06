@@ -4,6 +4,7 @@ import threading
 import time
 from copy import deepcopy
 from datetime import datetime, timedelta
+from typing import Optional
 
 from builder import Builder
 from lib.database_manager import DatabaseManager
@@ -14,6 +15,7 @@ from lib.model.catalog_type import CatalogType
 from lib.model.catalog_web import CatalogWeb
 from lib.providers.catalog_info import ImdbInfo
 from lib.providers.catalog_provider import CatalogProvider
+import json
 
 db_manager = DatabaseManager.instance()
 
@@ -90,7 +92,11 @@ class WebWorker:
 
     def get_web_catalogs(self) -> list:
         config_manifest = db_manager.cached_manifest
+        print(db_manager.cached_catalogs['data']['data'])
         tmp_catalogs = config_manifest.get("catalogs", [])
+        if not len(tmp_catalogs):
+            tmp_catalogs = db_manager.cached_catalogs['data']['data']
+
         nested_catalogs = self.build_tree(tmp_catalogs).children
         web_catalogs = [nested_catalog.to_dict() for nested_catalog in nested_catalogs]
         return web_catalogs
@@ -115,7 +121,7 @@ class WebWorker:
         manifest.update({"catalogs": []})
         return manifest
 
-    def get_configured_manifest(self, base_url: str, configs: str | None) -> dict:
+    def get_configured_manifest(self, base_url: str, configs: Optional[str]) -> dict:
         config_manifest = deepcopy(db_manager.cached_manifest)
         config_manifest.update({"name": env.APP_NAME})
         config_manifest.update({"logo": f"{base_url}logo.png"})
@@ -136,6 +142,9 @@ class WebWorker:
             return self.remove_manifest_catalogs(config_manifest)
 
         tmp_catalogs = config_manifest.get("catalogs", [])
+        if not len(tmp_catalogs):
+            tmp_catalogs = db_manager.cached_catalogs['data']['data']
+        
         new_catalogs = []
         for value in parsed_config:
             for catalog in tmp_catalogs:
@@ -153,7 +162,7 @@ class WebWorker:
     def get_trakt_auth_url(self) -> str:
         return Trakt().get_authorization_url()
 
-    def get_trakt_access_token(self, code: str) -> str | None:
+    def get_trakt_access_token(self, code: str) -> Optional[str]:
         return Trakt().get_access_token(code)
 
     def __get_trakt_recommendations(self, id: str, access_token: str) -> list:
@@ -172,13 +181,13 @@ class WebWorker:
             )
         return trakt_metas
 
-    def get_meta(self, id: str, s_type: str, config: str | None) -> dict:
+    def get_meta(self, id: str, s_type: str, config: Optional[str]) -> dict:
         imdb_id = id.replace("cyberflix:", "")
         original_meta = self.__provider.cinemeta.get_meta(id=imdb_id, s_type=s_type) or {}
         meta = original_meta.get("meta") or {}
         return {"meta": meta}
 
-    async def get_configured_catalog(self, id: str, extras: str | None, config: str | None) -> dict:
+    async def get_configured_catalog(self, id: str, extras: Optional[str], config: Optional[str]) -> dict:
         catalog = db_manager.cached_catalogs.get(id) or {}
         catalog_ids = catalog.get("data") or []
 
@@ -246,7 +255,7 @@ class WebWorker:
             "total": len(sorted_metas)
         }
 
-    def __filter_meta(self, items: list[ImdbInfo], genre: str | None, skip: int) -> list:
+    def __filter_meta(self, items: list[ImdbInfo], genre: Optional[str], skip: int) -> list:
         new_items = []
         if genre is not None:
             if genre.isnumeric():
@@ -384,7 +393,7 @@ class WebWorker:
                     
         return False
 
-    def __extras_parser(self, extras: str | None) -> dict:
+    def __extras_parser(self, extras: Optional[str]) -> dict:
         result = {"genre": None, "skip": 0}
 
         if extras is not None:

@@ -2,7 +2,7 @@ from lib.apis.just_watch import JustWatch
 from lib.model.catalog_type import CatalogType
 from lib.providers.catalog_info import ImdbInfo
 from lib.providers.catalog_provider import CatalogProvider
-
+from typing import Optional
 
 class JustWatchProvider(CatalogProvider):
     def __init__(self):
@@ -24,10 +24,10 @@ class JustWatchProvider(CatalogProvider):
         jw_data = self.__api.request_page(schema=schema, pages=pages)
         imdb_infos = []
         for data in jw_data:
-            imdb_id: str | None = data.get("imdb_id", None)
+            imdb_id: Optional[str] = data.get("imdb_id", None)
             if imdb_id is None or imdb_id.startswith("tt") is False:
                 continue
-            object_type: str | None = data.get("object_type", None)
+            object_type: Optional[str] = data.get("object_type", None)
             if object_type is None:
                 continue
             jw_c_type = CatalogType.SERIES if object_type.upper() == "SHOW" else CatalogType.MOVIES

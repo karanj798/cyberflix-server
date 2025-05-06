@@ -1,0 +1,1983 @@
+{
+  "data": {
+    "data": [
+      {
+        "id": "premieres.movie",
+        "name": "Premieres",
+        "type": "movie",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "premieres.series",
+        "name": "Premieres",
+        "type": "series",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "History",
+              "Horror",
+              "Kids",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "trending_today.movie",
+        "name": "Trending Today",
+        "type": "movie",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "trending_today.series",
+        "name": "Trending Today",
+        "type": "series",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "trending.movie",
+        "name": "Trending This Week",
+        "type": "movie",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "trending.series",
+        "name": "Trending This Week",
+        "type": "series",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adult",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "blockbusters.movie",
+        "name": "Blockbusters",
+        "type": "movie",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "netflix.popular.movie",
+        "name": "Popular Movies",
+        "type": "Netflix",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "netflix.popular.series",
+        "name": "Popular Series",
+        "type": "Netflix",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "netflix.new.movie",
+        "name": "New Movies",
+        "type": "Netflix",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2014",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "netflix.new.series",
+        "name": "New Series",
+        "type": "Netflix",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2011",
+              "2010"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "disney_plus.popular.movie",
+        "name": "Popular Movies",
+        "type": "Disney Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "disney_plus.popular.series",
+        "name": "Popular Series",
+        "type": "Disney Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "disney_plus.new.movie",
+        "name": "New Movies",
+        "type": "Disney Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "disney_plus.new.series",
+        "name": "New Series",
+        "type": "Disney Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hbo_max.popular.movie",
+        "name": "Popular Movies",
+        "type": "Hbo Max",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hbo_max.popular.series",
+        "name": "Popular Series",
+        "type": "Hbo Max",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hbo_max.new.movie",
+        "name": "New Movies",
+        "type": "Hbo Max",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hbo_max.new.series",
+        "name": "New Series",
+        "type": "Hbo Max",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "amazon_prime.popular.movie",
+        "name": "Popular Movies",
+        "type": "Amazon Prime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "amazon_prime.popular.series",
+        "name": "Popular Series",
+        "type": "Amazon Prime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "amazon_prime.new.movie",
+        "name": "New Movies",
+        "type": "Amazon Prime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2017",
+              "2015",
+              "2013",
+              "2012",
+              ""
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "amazon_prime.new.series",
+        "name": "New Series",
+        "type": "Amazon Prime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2012",
+              "2000"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "apple_tv_plus.popular.movie",
+        "name": "Popular Movies",
+        "type": "Apple Tv Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "apple_tv_plus.popular.series",
+        "name": "Popular Series",
+        "type": "Apple Tv Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "apple_tv_plus.new.movie",
+        "name": "New Movies",
+        "type": "Apple Tv Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2003",
+              "2002",
+              "1992",
+              "1986",
+              "1975",
+              "1974",
+              "1973"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "apple_tv_plus.new.series",
+        "name": "New Series",
+        "type": "Apple Tv Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2017",
+              "2015",
+              "2014",
+              "2007",
+              "2004",
+              "1983"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hulu.popular.movie",
+        "name": "Popular Movies",
+        "type": "Hulu",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hulu.popular.series",
+        "name": "Popular Series",
+        "type": "Hulu",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hulu.new.movie",
+        "name": "New Movies",
+        "type": "Hulu",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "hulu.new.series",
+        "name": "New Series",
+        "type": "Hulu",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "paramount_plus.popular.movie",
+        "name": "Popular Movies",
+        "type": "Paramount Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "paramount_plus.popular.series",
+        "name": "Popular Series",
+        "type": "Paramount Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "paramount_plus.new.movie",
+        "name": "New Movies",
+        "type": "Paramount Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "paramount_plus.new.series",
+        "name": "New Series",
+        "type": "Paramount Plus",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "peacock_premium.popular.movie",
+        "name": "Popular Movies",
+        "type": "Peacock Premium",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "peacock_premium.popular.series",
+        "name": "Popular Series",
+        "type": "Peacock Premium",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "peacock_premium.new.movie",
+        "name": "New Movies",
+        "type": "Peacock Premium",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2009"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "peacock_premium.new.series",
+        "name": "New Series",
+        "type": "Peacock Premium",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "starz.popular.movie",
+        "name": "Popular Movies",
+        "type": "Starz",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "starz.popular.series",
+        "name": "Popular Series",
+        "type": "Starz",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Mystery",
+              "Romance",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "starz.new.movie",
+        "name": "New Movies",
+        "type": "Starz",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "starz.new.series",
+        "name": "New Series",
+        "type": "Starz",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2010",
+              "2009",
+              "1999"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "sky_showtime.popular.movie",
+        "name": "Popular Movies",
+        "type": "Sky Showtime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "sky_showtime.popular.series",
+        "name": "Popular Series",
+        "type": "Sky Showtime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "sky_showtime.new.movie",
+        "name": "New Movies",
+        "type": "Sky Showtime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "sky_showtime.new.series",
+        "name": "New Series",
+        "type": "Sky Showtime",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "kids.popular.movie",
+        "name": "Popular Movies",
+        "type": "Kids",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "kids.popular.series",
+        "name": "Popular Series",
+        "type": "Kids",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "kids.new.movie",
+        "name": "New Movies",
+        "type": "Kids",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "kids.new.series",
+        "name": "New Series",
+        "type": "Kids",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "indian.popular.movie",
+        "name": "Popular Movies",
+        "type": "Indian",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "indian.popular.series",
+        "name": "Popular Series",
+        "type": "Indian",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "Action",
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Crime",
+              "Documentary",
+              "Drama",
+              "Family",
+              "Fantasy",
+              "History",
+              "Horror",
+              "Kids",
+              "Music",
+              "Mystery",
+              "Romance",
+              "Sci-Fi",
+              "Short",
+              "Sport",
+              "Thriller",
+              "Western"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "indian.new.movie",
+        "name": "New Movies",
+        "type": "Indian",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "1991",
+              "1958"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      },
+      {
+        "id": "indian.new.series",
+        "name": "New Series",
+        "type": "Indian",
+        "extra": [
+          {
+            "name": "genre",
+            "options": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011"
+            ]
+          },
+          {
+            "name": "skip"
+          }
+        ],
+        "extraSupported": [
+          "genre",
+          "skip"
+        ]
+      }
+    ]
+  }
+}

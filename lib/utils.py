@@ -2,6 +2,7 @@ import concurrent.futures
 import traceback
 import logging
 import os
+from typing import Optional
 
 log = logging.getLogger(__name__)
 
@@ -20,7 +21,7 @@ def divide_chunks(l, n):
         yield l[i : i + n]
 
 
-def parallel_for(function: callable, items: list[any], max_workers: int|None = None, **kwargs) -> list[any]:
+def parallel_for(function: callable, items: list[any], max_workers: Optional[int] = None, **kwargs) -> list[any]:
     """
     Execute a function in parallel for a list of items with exact number of workers.
 

@@ -1,10 +1,11 @@
 import httpx
 
 from lib import env, log
+from typing import Optional
 
 
 class MDBList:
-    def __init__(self, api_key: str | None = None) -> None:
+    def __init__(self, api_key: Optional[str] = None) -> None:
         self.__url = "https://mdblist.com/api/"
         api_key = api_key or env.MDBLIST_API_KEY
         if api_key is None:

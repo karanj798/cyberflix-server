@@ -4,6 +4,7 @@ from lib.model.catalog_type import CatalogType
 from lib.providers.catalog_info import ImdbInfo
 from lib.providers.catalog_provider import CatalogProvider
 from lib.database_manager import DatabaseManager
+from typing import Optional
 
 db_manager = DatabaseManager.instance()
 
@@ -24,7 +25,7 @@ class TMDBProvider(CatalogProvider):
         #db_manager.update_tmdb_ids(db_manager.cached_tmdb_ids)
         return imdb_infos
 
-    def __get_imdb_id(self, tmdb_id: str, type: CatalogType) -> str | None:
+    def __get_imdb_id(self, tmdb_id: str, type: CatalogType) -> Optional[str]:
         external_ids = self.tmdb.get_external_ids(tmdb_id=tmdb_id, c_type=type)
         imdb_id = None
         if external_ids is not None:

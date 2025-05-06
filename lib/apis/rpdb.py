@@ -4,6 +4,7 @@ from copy import deepcopy
 import httpx
 
 from lib import log, utils
+from typing import Optional
 
 
 class RPDB:
@@ -38,7 +39,7 @@ class RPDB:
             log.info(e)
         return 0
 
-    def get_poster(self, imdb_id: str, api_key: str, lang="en") -> str | None:
+    def get_poster(self, imdb_id: str, api_key: str, lang="en") -> Optional[str]:
         url = f"{self.__url}/{api_key}/imdb/poster-default/{imdb_id}.jpg?fallback=true"
         if not api_key.startswith("t1-"):
             url = f"{url}&lang={lang}"

@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from typing import Optional
 
 from lib.model.catalog_filter_type import CatalogFilterType
 from lib.model.catalog_type import CatalogType
@@ -8,7 +9,7 @@ class CatalogConfig:
     def __init__(self, name_id: str, provider_id: str, types: list[CatalogType], schema: str, **kwargs):
         self.__name_id: str = name_id
         self.__provider_id: str = provider_id
-        self.__display_name: str | None = kwargs.get("display_name") or None
+        self.__display_name: Optional[str] = kwargs.get("display_name") or None
         self.__types: list[CatalogType] = types
         self.__schema: str = schema
         self.__filter_type: CatalogFilterType = kwargs.get("filter_type") or CatalogFilterType.CATEGORIES
@@ -25,7 +26,7 @@ class CatalogConfig:
         return self.__provider_id
 
     @property
-    def display_name(self) -> str | None:
+    def display_name(self) -> Optional[str]:
         return self.__display_name
 
     @property
@@ -41,7 +42,7 @@ class CatalogConfig:
         return self.__expiration_date
 
     @property
-    def pages(self) -> int | None:
+    def pages(self) -> Optional[int]:
         return self.__pages
 
     @property

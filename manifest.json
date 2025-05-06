@@ -1,0 +1,26 @@
+{
+  "id": "marcojoao.ml.cyberflix.catalog",
+  "version": "1.6.0",
+  "name": "Cyberflix Catalog",
+  "description": "Cyberflix, an catalog add-on for Stremio, aggregates the most popular steaming platforms such as Netflix, Amazon Prime or Hulu, and also specific catalogs for Kids, Asian or Anime.",
+  "logo": "http://cyberflix.elfhosted.com/logo.png",
+  "behaviorHints": {
+    "configurable": true,
+    "configurationRequired": true
+  },
+  "idPrefixes": [
+    "cyberflix:"
+  ],
+  "resources": [
+    "catalog",
+    "meta"
+  ],
+  "types": [
+    "series",
+    "movie"
+  ],
+  "catalogs": [],
+  "background": "http://cyberflix.elfhosted.com/background.png",
+  "last_update": "2025-05-06 02:35:24.000418",
+  "server_version": "2.0.0"
+}

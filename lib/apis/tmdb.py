@@ -4,10 +4,11 @@ import httpx
 
 from lib import env, log
 from lib.model.catalog_type import CatalogType
+from typing import Optional, Union
 
 
 class TMDB:
-    def __init__(self, api_key: str | None = None) -> None:
+    def __init__(self, api_key: Optional[str] = None) -> None:
         self.__url = "https://api.themoviedb.org/3"
         api_key = api_key or env.TMDB_API_KEY
         if api_key is None:
@@ -26,7 +27,7 @@ class TMDB:
     def api_key(self) -> str:
         return self.__api_key
 
-    def __request(self, url: str) -> dict | None:
+    def __request(self, url: str) -> Optional[dict]:
         with httpx.Client() as client:
             try:
                 response = client.get(url, headers=self.__headers, timeout=1.5)
@@ -53,7 +54,7 @@ class TMDB:
             return nodes
         return nodes
 
-    def find(self, id: str, c_type: CatalogType, external_source: str = "imdb_id") -> dict | None:
+    def find(self, id: str, c_type: CatalogType, external_source: str = "imdb_id") -> Optional[dict]:
         url = (
             f"{self.__url}/find/{id}?api_key={self.api_key}&language=en-US&external_source={external_source}"
         )
@@ -75,14 +76,14 @@ class TMDB:
                 return result[0]
         return None
 
-    def get_external_ids(self, tmdb_id: str, c_type: CatalogType) -> dict | None:
+    def get_external_ids(self, tmdb_id: str, c_type: CatalogType) -> Optional[dict]:
         if c_type == CatalogType.ANY:
             return None
         content_type = "movie" if c_type == CatalogType.MOVIES else "tv"
         url = f"{self.__url}/{content_type}/{tmdb_id}/external_ids?api_key={self.__api_key}"
         return self.__request(url)
 
-    def search(self, query: str, c_type: CatalogType | str) -> list | None:
+    def search(self, query: str, c_type: Union[CatalogType, str]) -> Optional[list]:
         if isinstance(c_type, str):
             c_type = CatalogType(c_type)
         search_type = "movie" if c_type == CatalogType.MOVIES else "tv"

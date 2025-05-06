@@ -8,6 +8,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.middleware.gzip import GZipMiddleware
 from lib import env
 from lib.web_worker import WebWorker
+from typing import Optional
 
 SERVER_VERSION = "2.0.0"
 
@@ -71,7 +72,7 @@ async def root(request: Request):
 
 @app.get("/configure")
 @app.get("/c/{configs}/configure")
-async def configure(configs: str | None = None):
+async def configure(configs: Optional[str] = None):
     return RedirectResponse(url="/", status_code=302)
 
 
@@ -117,7 +118,7 @@ async def background():
 @app.get("/c/{configs}/manifest.json")
 async def manifest(
     request: Request,
-    configs: str | None = None,
+    configs: Optional[str] = None,
 ):
     referer = str(request.base_url)
     manifest = worker.get_configured_manifest(referer, configs)
@@ -135,7 +136,7 @@ async def web_config():
 
 @app.get("/meta/{type}/{id}.json")
 @app.get("/c/{configs}/meta/{type}/{id}.json")
-async def meta(type: str | None, id: str | None, configs: str | None = None):
+async def meta(type: Optional[str], id: Optional[str], configs: Optional[str] = None):
     if id is None or type is None:
         return HTTPException(status_code=404, detail="Not found")
     meta = worker.get_meta(id=id, s_type=type, config=configs)
@@ -145,14 +146,14 @@ async def meta(type: str | None, id: str | None, configs: str | None = None):
 
 @app.get("/catalog/{type}/{id}.json")
 @app.get("/catalog/{type}/{id}/{extras}.json")
-async def catalog(type: str | None, id: str | None, extras: str | None = None):
+async def catalog(type: Optional[str], id: Optional[str], extras: Optional[str] = None):
     return await catalog_with_configs(configs=None, type=type, id=id, extras=extras)
 
 
 @app.get("/c/{configs}/catalog/{type}/{id}.json")
 @app.get("/c/{configs}/catalog/{type}/{id}/{extras}.json")
 async def catalog_with_configs(
-    configs: str | None, type: str | None, id: str | None, extras: str | None = None
+    configs: Optional[str], type: Optional[str], id: Optional[str], extras: Optional[str] = None
 ):
     if id is None:
         return HTTPException(status_code=404, detail="Not found")
